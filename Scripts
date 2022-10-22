@@ -1,0 +1,35 @@
+
+
+let string = "1+20-3+30-43+30-4";
+let differenceOperate;
+let signFinder;
+let plusAry = [];
+let minusAry = [];
+for(let i=0; i<string.length; i++){
+    if(string[i].charAt('+')=='+'){
+        console.log('true', string[i]);
+        differenceOperate = 0;
+    }
+     else if(string[i].charAt('-')=='-'){
+        console.log('true', string[i]);
+                differenceOperate = 1;
+    }
+    else{
+        if(differenceOperate==0){
+            signFinder = `+ value ${string[i]}`;
+            plusAry.push(string[i]);
+        }
+        else{
+            signFinder = `- value ${string[i]}`;
+            minusAry.push(string[i]);
+        }
+        console.log('signFinder', signFinder);
+    }
+        }
+        console.log('original elements', string);
+        console.log('+ elements', plusAry);
+        console.log('- elements', minusAry);
+
+        
+        
+  
